@@ -1,3 +1,6 @@
+# coding: utf-8
+# Your code here!
+
 def tngrs(numa, numb, numc):
     def hei(a):
         a = str(a)
@@ -12,19 +15,19 @@ def tngrs(numa, numb, numc):
                     if all(part.isdigit() for part in nums):
                         return (int(nums[1]) * (int(nums[0]) ** 2))
     x_index, cr = 0, 0
-    if not numa:
+    if not numa or numa == "0":
         x_index += 3
     else:
         numa = hei(numa)
         if isinstance(numa, str):
             return numa
-    if not numb:
+    if not numb or numb == "0":
         x_index += 4
     else:
         numb = hei(numb)
         if isinstance(numb, str):
             return numb
-    if not numc:
+    if not numc or numc == "0":
         x_index += 5
     else:
         numc = hei(numc)
@@ -33,13 +36,12 @@ def tngrs(numa, numb, numc):
     if x_index > 6 or x_index < 3:
         return "エラー：引数の数が正しくありません。"
     try:
-        match x_index:
-            case 3:
-                cr = numc - numb
-            case 4:
-                cr = numc - numa
-            case 5:
-                cr = numa + numb
+        if x_index == 3:
+            cr = numc - numb
+        elif x_index == 4:
+            cr = numc - numa
+        elif x_index == 5:
+            cr = numa + numb
     except:
         return "エラー：計算できません。"
     try:
@@ -64,6 +66,6 @@ def tngrs(numa, numb, numc):
         return ease_root(cr)
     except:
         return "エラー：直角三角形が存在しない可能性があります。"
-print("a^2 + b^2 = c^2 の a,b,c を入力してください。\n求めたい文字には入力しないでください。")
+print("a^2 + b^2 = c^2 の a,b,c を入力してください。\n求めたい文字には入力しないか、0を入力してください。")
 an, bn, cn = input("aを入力"), input("bを入力"), input("cを入力")
 print(tngrs(an, bn, cn))
