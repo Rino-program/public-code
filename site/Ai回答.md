@@ -34,10 +34,7 @@ manifest.webmanifest — PWAマニフェスト（アイコンはtitle.pngを参�
 エクスポート/インポート（JSON）
 使い始め（プレビュー）
 ブラウザでindex.htmlを開けば動作します（ローカル保存OK）。
-PWA/Service Workerを有効にするにはHTTP経由で配信が必要です（任意）。
-オプション（PowerShell, 任意）
-
-その後 http://localhost:8000/study/ を開きます。
+PWA/Service Workerを有効にするにはHTTP経由で配信が必要です（任意）
 
 要件カバレッジ
 ポモドーロ（自動切替・ラウンド・操作・タブタイトル）: Done
